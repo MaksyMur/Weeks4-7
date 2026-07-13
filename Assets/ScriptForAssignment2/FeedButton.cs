@@ -4,21 +4,23 @@ public class FeedButton : MonoBehaviour
 {
     public Transform baby;
 
-    public Vector3 normalScale;
-    public Vector3 bigScale;
+    public Vector3 normalScale; //baby's normal scale
+    public Vector3 bigScale; //baby's scale when pulsing
 
-    public float pulseSpeed = 5f;
+    public float pulseSpeed = 5f; //speed of the pulsing effect
 
-    bool isPulsing = false;
-    float timer = 0f;
+    bool isPulsing = false; //flag to check if the pulsing effect is active
+    float timer = 0f; //timer to track the pulsing effect
 
     void Start()
+    //initialize the normal and big scales based on the baby's current scale
     {
         normalScale = baby.localScale;
         bigScale = normalScale * 1.2f;
     }
 
     void Update()
+    //update the pulsing effect if it's active
     {
         if (isPulsing)
         {
@@ -41,8 +43,8 @@ public class FeedButton : MonoBehaviour
             }
         }
     }
-
-    public void FeedBaby()
+//method to trigger the pulsing effect when the feed button is pressed
+    public void FeedBaby() //
     {
         timer = 0f;
         isPulsing = true;

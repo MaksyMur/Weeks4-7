@@ -24,9 +24,9 @@ public class Fullness : MonoBehaviour
 
     public void Feed()
     {
-       if (FullnessSlider.value < FullnessSlider.maxValue)
+       if (FullnessSlider.value < FullnessSlider.maxValue) //check if the slider is not already full
        {
-            FullnessSlider.value += 1;
+            FullnessSlider.value += 1; //increase the slider value by 1
     }
      //give the reward when the slider reaches its maximum
         if (FullnessSlider.value >= FullnessSlider.maxValue)

@@ -49,7 +49,7 @@ public class BabyReward : MonoBehaviour
 
     public void GiveReward()
     {
-        // dont create the reward again
+        //dont create the reward again
         if (rewardCreated == false)
         {
             //change the sad baby to the happy baby
